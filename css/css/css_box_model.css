@@ -3,7 +3,13 @@
     height: 100px;
     line-height: 80px;
     background: #dedede;
+    background-color: #429b9e;
+    background-size:cover;
+    background-image: url(/images/favorite_icon/dogg.jpg);
     text-align: center;
+
+      /* text-align: left; */
+    /* text-align: right; */
     margin: auto;
     border: 2px solid red;
     padding: 10px;

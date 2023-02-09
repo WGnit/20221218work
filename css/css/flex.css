@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.title{
+    text-align: center;
+}
+
 .flex{
     display: flex;
     background: yellow;
@@ -20,4 +24,12 @@
     background: black;
     color: aqua;
     margin: 0px 10px;
+}
+
+.direction{
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+
 }

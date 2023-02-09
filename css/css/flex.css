@@ -1,0 +1,23 @@
+*,
+*::after
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    background: yellow;
+    width: 90%;
+    margin: 20px auto;
+    height: 300px;
+}
+
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: aqua;
+    margin: 0px 10px;
+}

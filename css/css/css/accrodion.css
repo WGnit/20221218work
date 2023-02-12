@@ -21,15 +21,34 @@
     border: 1px solid rgb(25, 45, 224);
   }
 
-.accrodion .tab label {
+.accrodion .tab > label {
     display: flex;
     background: rgb(54, 73, 245);
     color: #fff;
     padding: 12px;
-    font-size: 26px;
-    font-size: 700;
+    font-weight: 700;
     font-family: monospace;
+    cursor: pointer;
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       user-select: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.accrodion .tab > label > div {
+  font-size: 26px;
+  }
+  .accrodion .tab > label:hover {
+    background: rgb(255, 105, 36);
+  }
+  .accrodion .tab > label .close-icon {
+    display: none;
   }
   .accrodion .tab .tab-content {
     padding: 10px;
-  }/*# sourceMappingURL=accrodion.css.map */
+    display: none;
+  }
+  .accrodion .tab > input:checked + .tab-content {
+    display: block;}
+    /*# sourceMappingURL=accrodion.css.map */

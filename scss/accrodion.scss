@@ -22,6 +22,28 @@
 
         .tab-content {
             padding: 10px;
+            display: none;
+        }
+        >input:checked {
+            +label {
+                .open-icon {
+                    display: none;
+                }
+
+                .close-icon {
+                    display: block;
+                }
+            }
+
+            ~.tab-content {
+                display: block;
+            }
+        }
+
+        >input {
+            display: none;
+        }
+        
         }
     }
 }

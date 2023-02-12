@@ -4,17 +4,27 @@ body {
     background: #000;
 }
 .header {
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    .header-content {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
     .menu {
         list-style-type: none;
         display: flex;
+    
 
         // li {
         //     margin-right: 10px;
@@ -23,7 +33,7 @@ body {
         //         margin-right: 0;
         //     }
         // }
-        li {
+        .li {
             margin-left: 10px;
             font-weight: 700;
             text-align: center;
@@ -38,7 +48,9 @@ body {
         }
 
         .en {
-            font-size: 14px;
+            font-size: 12px;
+            font-family: monospace;
+            text-transform: uppercase;
         }
     }
 }

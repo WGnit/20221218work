@@ -4,6 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+}
+a{
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
@@ -11,6 +16,12 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .header-content {
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -24,17 +35,19 @@ body {
   list-style-type: none;
   display: flex;
 }
-.header .menu li {
+.header .menu .li {
   margin-left: 10px;
   font-weight: 700;
   text-align: center;
 }
-.header .menu li:first-child {
+.header .menu .li:first-child {
   margin-left: 0;
 }
-.header .menu li:hover {
+.header .menu .li:hover {
   color: rgb(47, 47, 255);
 }
 .header .menu .en {
-  font-size: 14px;
+  font-size: 12px;
+  font-family: monospace;
+  text-transform: uppercase;
 }/*# sourceMappingURL=layout_1.css.map */

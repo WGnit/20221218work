@@ -1,56 +1,63 @@
 @import 'reset';
 
-.container {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-  }
-
 .accrodion {
     margin: 20px auto;
     .tab {
-        border: 1px solid rgb(25, 45, 224);
+        border: 3px solid rgb(204, 59, 14);
+        border-bottom-width: 0;
+        &:last-child {
+            border-bottom-width: 3px;
+        }
         >label {
             display: flex;
             background: rgb(54, 73, 245);
             color: #fff;
             padding: 12px;
-            font-size: 26px;
             font-weight: 700;
             font-family: monospace;
             cursor: pointer;
-            -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  justify-content: space-between;
-  align-items: center;
-}
-.accrodion .tab > label > div {
-  font-size: 26px;
-}
-.accrodion .tab > label:hover {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab > label .close-icon {
-  display: none;
-}
-.accrodion .tab .tab-content {
-  padding: 10px;
-  display: none;
-}
-.accrodion .tab > input:checked + label {
-  background: rgb(255, 105, 36);
-}
-.accrodion .tab > input:checked + label .open-icon {
-  display: none;
-}
-.accrodion .tab > input:checked + label .close-icon {
-  display: block;
-}
-.accrodion .tab > input:checked ~ .tab-content {
-  display: block;
-}
-.accrodion .tab > input {
-  display: none;
-  }
+            user-select: none;
+            justify-content: space-between;
+            align-items: center;
+            >div {
+                font-size: 26px;
+            }
+            &:hover {
+                background: rgb(255, 105, 36);
+            }
+            .close-icon {
+                display: none;
+            }
+        }
+        .tab-content {
+            padding: 10px;
+            display: none;
+        }
+        >input:checked{
+            .tab-switch:checked{
+                +label {
+                    background: rgb(255, 105, 36);
+                    .open-icon {
+                        display: none;
+                    }
+                    .close-icon {
+                        display: block;
+                    }
+                }
+                ~.tab-content {
+                    display: block;
+                }
+                  /**
+        *   屬性選擇器解決方案
+        **/
+        // >input[type=radio],
+        // >input[type=checkbox] {
+        //     display: none;
+        // }
+
+        .tab-switch {
+            display: none;
+        }
+            }
+            }
+        }

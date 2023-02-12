@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+.header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.header .menu {
+  list-style-type: none;
+  display: flex;
+}
+.header .menu li {
+  margin-left: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+.header .menu li:first-child {
+  margin-left: 0;
+}
+.header .menu li:hover {
+  color: rgb(47, 47, 255);
+}
+.header .menu .en {
+  font-size: 14px;
+}/*# sourceMappingURL=layout_1.css.map */

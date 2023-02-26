@@ -15,10 +15,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition-property: all;
   transition-duration: 1s;
-  transition-delay: 1s;
+  transition-timing-function: ease;
 }
 .block:hover {
   background: #7da8f7;
   font-size: 30px;
+  width: 1000px;
 }/*# sourceMappingURL=transtion.css.map */

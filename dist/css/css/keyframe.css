@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.block.active {
+  animation-name: move;
+  animation-duration: 3s;
+  transform: translate(80%);
+}
+
+@keyframes move {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(80%);
+  }
+}/*# sourceMappingURL=keyframe.css.map */

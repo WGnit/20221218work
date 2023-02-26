@@ -18,9 +18,41 @@
   transition-property: all;
   transition-duration: 1s;
   transition-timing-function: ease;
+  position: relative;
+  left: 0;
 }
 .block:hover {
   background: #7da8f7;
   font-size: 30px;
-  width: 1000px;
+  left: 50%;
+}
+
+#switch-status {
+  display: none;
+}
+
+.func-block {
+  margin-top: 20px;
+}
+.func-block > label {
+  padding: 10px 20px;
+  background-color: #dedede;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.func-block > label.run {
+  background-color: #1d4fb9;
+  color: #fff;
+}
+.func-block > label.run:hover {
+  background-color: #12337a;
+}
+.func-block > label.back {
+  display: none;
+  background-color: #ff5656;
+  color: #fff;
+}
+.func-block > label.back:hover {
+  background-color: #af3030;
 }/*# sourceMappingURL=transtion.css.map */

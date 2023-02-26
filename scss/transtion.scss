@@ -14,11 +14,54 @@
     transition-duration: 1s;
     // transition-delay: 1s;
     transition-timing-function: ease;
+    position: relative;
+    left: 0;
 
 
     &:hover {
         background: #7da8f7;
         font-size: 30px;
-        width: 1000px;
+        left: 50%;
+    }
+
+    // &.active {
+    //     background: #1d4fb9;
+    //     font-size: 30px;
+    //     left: 50%;
+    // }
+}
+
+#switch-status {
+    display: none;
+}
+
+.func-block {
+    margin-top: 20px;
+
+    >label {
+        padding: 10px 20px;
+        background-color: #dedede;
+        font-weight: 800;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &.run {
+            background-color: #1d4fb9;
+            color: #fff;
+
+            &:hover {
+                background-color: #12337a;
+            }
+        }
+
+        &.back {
+            display: none;
+            background-color: #ff5656;
+            color: #fff;
+
+            &:hover {
+                background-color: #af3030;
+            }
+        }
     }
 }

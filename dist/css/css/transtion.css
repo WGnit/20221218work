@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  background: rgba(147, 192, 147, 0.4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 2s;
+  transition-delay: 1s;
+}
+.block:hover {
+  background: #7da8f7;
+  font-size: 30px;
+}/*# sourceMappingURL=transtion.css.map */

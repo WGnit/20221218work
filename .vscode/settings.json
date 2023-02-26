@@ -1,0 +1,12 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dist/css/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveServer.settings.root": "/dist",
+    "editor.formatOnSave": true
+}

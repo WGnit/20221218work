@@ -283,7 +283,6 @@ body {
   cursor: pointer;
 }
 .mobile-icon > span {
-  display: inline-block;
   width: 30px;
   height: 5px;
   background: #000;
@@ -295,5 +294,9 @@ body {
   margin-bottom: 0;
 }
 .mobile-icon:hover > span {
+  background: red;
+}
+
+#mobile-menu-switch:checked ~ .mobile-icon {
   background: red;
 }/*# sourceMappingURL=layout_1_rwd.css.map */

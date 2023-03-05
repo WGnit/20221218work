@@ -5,7 +5,7 @@
     cursor: pointer;
 
     >span {
-        display: inline-block;
+        // display: inline-block;
         width: 30px;
         height: 5px;
         background: #000;
@@ -20,6 +20,16 @@
 
     &:hover {
         >span {
+            background: red;
+        }
+    }
+}
+
+#mobile-menu-switch {
+    // display: none;
+
+    &:checked {
+        ~.mobile-icon {
             background: red;
         }
     }

@@ -1,0 +1,60 @@
+@import'reset';
+
+body {
+    background: #000;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    .header-content {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .menu {
+        list-style-type: none;
+        display: flex;
+
+
+        // li {
+        //     margin-right: 10px;
+
+        //     &:last-child {
+        //         margin-right: 0;
+        //     }
+        // }
+        li {
+            margin-left: 10px;
+            font-weight: 700;
+            text-align: center;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: rgb(47, 47, 255);
+            }
+        }
+
+        .en {
+            font-size: 12px;
+            font-family: monospace;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+@import'layout_2_rwd_mobile';

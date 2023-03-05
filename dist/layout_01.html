@@ -20,7 +20,8 @@
                         <img src="images/logo.svg" alt="">
                     </a>
                 </div>
-                <div class="menu extend">
+                <!-- <div class="menu extend"> -->
+                <div class="memu popup">
                     <ul>
                         <li>
                             <a href="#">
@@ -129,5 +130,16 @@
 <script>
     new WOW().init();
 </script>
+
+<!-- <script>
+
+    let popupMenu = document.querySelector('.menu.popup');
+    if (popupMenu) {
+        popupMenu.addEventListener('click', () => {
+            let sw = document.querySelector('#mobile-menu-switch');
+            sw && sw.click();
+        });
+    }
+</script> -->
 
 </html>

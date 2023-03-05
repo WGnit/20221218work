@@ -1,6 +1,7 @@
 .mobile-icon {
     position: relative;
     display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
     width: 30px;
@@ -11,7 +12,7 @@
         height: 5px;
         background: #000;
         margin-bottom: 5px;
-        transition-property: background-color;
+        transition-property: background-color transform;
         transition-duration: 0.5s;
 
         &:last-child {
@@ -35,6 +36,7 @@
                 position: absolute;
 
                 &:first-child {
+                    top: -5px;
                     transform: rotate(45deg);
 
                 }
@@ -44,6 +46,7 @@
                 }
 
                 &:last-child {
+                    top: -5px;
                     transform: rotate(-45deg);
                 }
             }
@@ -51,4 +54,15 @@
     }
 }
 
-@media screen and (max-width:600px) {}
+@media screen and (max-width:600px) {
+    .mobile-icon {
+        display: flex;
+    }
+
+    .header {
+        .menu {
+            display: none;
+        }
+    }
+
+}

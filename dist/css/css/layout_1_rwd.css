@@ -279,6 +279,7 @@ body {
 .mobile-icon {
   position: relative;
   display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   width: 30px;
@@ -288,7 +289,7 @@ body {
   height: 5px;
   background: #000;
   margin-bottom: 5px;
-  transition-property: background-color;
+  transition-property: background-color transform;
   transition-duration: 0.5s;
 }
 .mobile-icon > span:last-child {
@@ -305,11 +306,22 @@ body {
   position: absolute;
 }
 #mobile-menu-switch:checked ~ .mobile-icon > span:first-child {
+  top: -5px;
   transform: rotate(45deg);
 }
 #mobile-menu-switch:checked ~ .mobile-icon > span:nth-child(2) {
   display: none;
 }
 #mobile-menu-switch:checked ~ .mobile-icon > span:last-child {
+  top: -5px;
   transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-icon {
+    display: flex;
+  }
+  .header .menu {
+    display: none;
+  }
 }/*# sourceMappingURL=layout_1_rwd.css.map */

@@ -37,3 +37,28 @@ const login = function () {
 
     acc.value = 'ffff';
 }
+
+
+uid.style.backgroundcolor = 'red';
+console.log(uid.classList);
+
+// uid.classList.add('secondary');
+// uid.classList.remove('main');
+
+const myContains = function (dom, className) {
+    let cnme = dom, className;
+    let cnamArr = cname.split('');
+
+    cnameArr.forEach(n => {
+        if (n == className) {
+            console.log(`${className} in dom element. use function`);
+        }
+    })
+}
+
+if (uid.classList.contains('main')) {
+    console.log('main in uid element. use contains');
+}
+
+myContains(uid, 'main');
+

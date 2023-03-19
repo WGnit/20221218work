@@ -24,3 +24,16 @@ m_uid.forEach(u => {
 m_students.forEach(s => {
     console.log(s);
 })
+
+if (uid) {
+    uid.innerHTML = 'New UID';
+}
+
+const login = function () {
+    let acc = document.querySelector('#acc');
+    let pwd = document.querySelector('#pwd');
+
+    console.log(acc.value, pwd.value);
+
+    acc.value = 'ffff';
+}

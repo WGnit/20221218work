@@ -67,6 +67,9 @@
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
+.form-control:focus:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -143,8 +146,10 @@ body {
   background-color: #fff;
   border-radius: 10000px;
   position: relative;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .cloud::after {
   content: "";
@@ -168,23 +173,40 @@ body {
 }
 .cloud.s1 {
   transform: translate(10%, 15vh);
-  animation-name: move-1;
-  animation-duration: 2s;
+  -webkit-animation-name: move-1;
+          animation-name: move-1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .cloud.s2 {
   transform: translate(100px, 25vh) scale(0.8);
-  animation-name: move-2;
-  animation-duration: 7s;
+  -webkit-animation-name: move-2;
+          animation-name: move-2;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
 }
 .cloud.s3 {
   transform: translate(150px, 25vh) scale(0.2);
-  animation-name: move-3;
-  animation-duration: 4s;
+  -webkit-animation-name: move-3;
+          animation-name: move-3;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 .cloud.s4 {
   transform: translate(50px, 35vh) scale(0.6);
-  animation-name: move-4;
-  animation-duration: 5s;
+  -webkit-animation-name: move-4;
+          animation-name: move-4;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, 0);
+  }
 }
 
 @keyframes move {
@@ -195,12 +217,28 @@ body {
     transform: translate(100%, 0);
   }
 }
+@-webkit-keyframes move-1 {
+  from {
+    transform: translate(10%, 15vh);
+  }
+  to {
+    transform: translate(100%, 15vh);
+  }
+}
 @keyframes move-1 {
   from {
     transform: translate(10%, 15vh);
   }
   to {
     transform: translate(100%, 15vh);
+  }
+}
+@-webkit-keyframes move-2 {
+  from {
+    transform: translate(100px, 25vh) scale(0.8);
+  }
+  to {
+    transform: translate(100%, 25vh) scale(0.8);
   }
 }
 @keyframes move-2 {
@@ -211,12 +249,29 @@ body {
     transform: translate(100%, 25vh) scale(0.8);
   }
 }
+@-webkit-keyframes move-3 {
+  from {
+    transform: translate(150px, 25vh) scale(0.2);
+  }
+  to {
+    transform: translate(100%, 25vh) scale(0.2);
+  }
+}
 @keyframes move-3 {
   from {
     transform: translate(150px, 25vh) scale(0.2);
   }
   to {
     transform: translate(100%, 25vh) scale(0.2);
+  }
+}
+@-webkit-keyframes move-4 {
+  from {
+    transform: translate(50px, 35vh) scale(0.6);
+  }
+  to {
+    transform: translateX(100%);
+    transform: translate(100%, 35vh) scale(0.6);
   }
 }
 @keyframes move-4 {

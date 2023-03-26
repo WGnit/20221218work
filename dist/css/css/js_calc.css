@@ -114,53 +114,43 @@
   display: inline-block;
 }
 
-.block {
-  width: 200px;
-  height: 200px;
-  background: rgba(147, 192, 147, 0.4);
-  color: #033d2c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition-property: all;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  position: relative;
-  left: 0;
-}
-.block:hover {
-  background: #7da8f7;
-  font-size: 30px;
-  left: 50%;
+.calc {
+  margin-top: 30px;
+  font-family: "Courier New", Courier, monospace;
 }
 
-#switch-status {
-  display: none;
-}
-
-.func-block {
-  margin-top: 20px;
-}
-.func-block > label {
-  padding: 10px 20px;
-  background-color: #dedede;
+#calc-total {
+  line-height: 80px;
+  background: #7a260d;
+  color: #fff;
+  font-size: 40px;
   font-weight: 800;
-  border-radius: 5px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+}
+.calc-row > div {
+  flex: 2;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dedede;
+  height: 60px;
+  border: 1px solid #fff;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
-.func-block > label.run {
-  background-color: #1d4fb9;
+.calc-row > div:hover {
+  background: #ff4747;
   color: #fff;
 }
-.func-block > label.run:hover {
-  background-color: #12337a;
-}
-.func-block > label.back {
-  display: none;
-  background-color: #ff5656;
-  color: #fff;
-}
-.func-block > label.back:hover {
-  background-color: #af3030;
-}/*# sourceMappingURL=transtion.css.map */
+.calc-row > div:last-child {
+  flex: 1;
+}/*# sourceMappingURL=js_calc.css.map */

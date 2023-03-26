@@ -67,6 +67,9 @@
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
+.form-control:focus:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+}
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }
@@ -123,8 +126,10 @@ body {
   border-radius: 10000px;
   transform: translateX(10%) translateY(15vh);
   position: relative;
-  animation-name: move;
-  animation-duration: 2s;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .cloud::after {
   content: "";
@@ -145,6 +150,15 @@ body {
   background: #fff;
   left: 145px;
   top: -92px;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes move {

@@ -21,3 +21,16 @@ account.addEventListener('change', printValue);
 account.addEventListener('blur', () => {
     console.log('Input Is Blur.');
 });
+
+account.addEventListener('keypress', () => {
+    // console.log('Input Is Keypress.');
+    // console.log(account.value);
+})
+
+account.addEventListener('keyup', (e) => {
+    console.log('Input Is Keyup.');
+    let key = e.key;
+    if (key == 'a' || key == 'A') {
+        console.log('AAA');
+    }
+})

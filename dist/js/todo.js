@@ -17,8 +17,12 @@ item.addEventListener('click', (e) => {
         let isDone = target.classList.contains('delete');
         if (isDone) {
             // 變成未完成
+            arget.classList.remove('delete');
+            target.querySelector('input').checked = false;
         } else {
             // 變成完成
+            target.classList.add('delete');
+            target.querySelector('input').checked = true;
         }
     }
 })
@@ -61,6 +65,18 @@ addBtn.addEventListener('click', () => {
     //     let name = itemName.value;
     //     appendItemES6(name);
     // }
+}
+
+addBtn.addEventListener('click', () => {
+    addItem();
+})
+
+itemName.addEventListener('keyup', (e) => {
+    let key = e.key.toLowerCase();
+
+    if (key == 'enter') {
+        addItem();
+    }
 })
 
 const valid = () => {

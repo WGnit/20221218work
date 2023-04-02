@@ -67,6 +67,12 @@
 .form-control:focus::-moz-placeholder {
   color: rgb(204, 204, 204);
 }
+<<<<<<< HEAD
+=======
+.form-control:focus:-ms-input-placeholder {
+  color: rgb(204, 204, 204);
+}
+>>>>>>> cccac46239330a233e2ab3c6851c785b39d0aefb
 .form-control:focus::placeholder {
   color: rgb(204, 204, 204);
 }

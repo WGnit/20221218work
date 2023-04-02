@@ -73,17 +73,37 @@ const reset = () => {
 }
 
 
+// let todoData = [];
+// todoData.push({
+//     status: 'done',
+//     value: '測試'
+// });
 
-let todoData = [];
-todoData.push({
-    status: 'done',
-    value: '測試'
-});
+// todoData.push({
+//     status: 'pending',
+//     value: '測試2'
+// });
 
-let todoDataToString = JSON.stringify(todoData);
-localStorage.setItem('todo', todoDataToString);
-console.table(todoData);
+// let todoDataToString = JSON.stringify(todoData);
+// localStorage.setItem('todo', todoDataToString);
+// console.table(todoData);
 
-let todoDataRestore = JSON.parse(localStorage.getItem('todo'));
-console.log('%c 還原', 'color: red; font-size: 30px;');
-console.table(todoDataRestore);
+const makeUI = () => {
+    let todoDataRestore = JSON.parse(localStorage.getItem('todo'));
+    console.log('%c 還原', 'color: red; font-size: 30px;');
+    console.table(todoDataRestore);
+
+    let li = '';
+
+    todoDataRestore.forEach(item => {
+        let checked = item.status == 'done' ? 'checked' : '';
+        let liClass = checked ? 'delete' : '';
+        li += `<li class="${liClass}">
+            <input type="checkbox" ${checked}>
+            <div>${item.value}</div>
+        </li>`
+    })
+    item.innerHTML = li;
+}
+
+makeUI();

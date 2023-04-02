@@ -25,8 +25,28 @@ const appendItemES6 = (name) => {
 }
 
 addBtn.addEventListener('click', () => {
+    if (!valid()) {
+        reset();
+        return;
+    }
     let name = itemName.value;
-    console.log(name);
     // appendItem(name);
     appendItemES6(name);
+
+    reset();
+
+    // 寫法二
+    // if (valid()) {
+    //     let name = itemName.value;
+    //     appendItemES6(name);
+    // }
 })
+
+const valid = () => {
+    return itemName && itemName.value;
+}
+
+const reset = () => {
+    itemName.value = '';
+    itemName.focus();
+}

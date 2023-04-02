@@ -15,24 +15,21 @@ createApp({
             // 新增資料
             this.items.push({
                 status: 'pending',
-                value: this.getName()
+                value: this.itemValue
             })
             this.reset();
             this.save();
         },
         getName() {
-            if (this.$refs.itemName) {
-                return this.$refs.itemName.value;
-            }
-            return '';
+            return this.itemValue;
         },
         valid() {
-            return (this.getName());
+            return (this.itemValue);
         },
         reset() {
             let itemName = this.$refs.itemName;
             if (itemName) {
-                itemName.value = '';
+                this.itemValue = '';
                 itemName.focus();
             }
         },

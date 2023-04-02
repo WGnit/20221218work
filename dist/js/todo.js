@@ -2,6 +2,27 @@ let addBtn = document.querySelector('#add-btn');
 let itemName = document.querySelector('#item-name');
 let item = document.querySelector('#item');
 
+item.addEventListener('click', (e) => {
+    let target = e.target;
+    let tag = targrt.tagname.toLowerCase();
+
+    // 因為結構上input 與 div 上一層都是li
+    if (tag == 'input' || tag == 'div') {
+        target = target.parentNode;
+        tag = target.tagName.toLowerCase();
+    }
+
+    // 當為li 時表示處理該項目，過濾點到 Ul
+    if (tag == 'li') {
+        let isDone = target.classList.contains('delete');
+        if (isDone) {
+            // 變成未完成
+        } else {
+            // 變成完成
+        }
+    }
+})
+
 const appendItem = (name) => {
     let li = document.createElement('li');
     let input = document.createElement('input');

@@ -31,6 +31,7 @@
                         :class="{delete: item.status == 'done'}">
                         <input type="checkbox" :checked="item.status == 'done'">
                         <div>{{ item.value }}</div>
+                        <button @click="removeItem(itemIndex)">刪除</button>
                     </li>
 
                 </ul>

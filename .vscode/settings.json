@@ -3,10 +3,10 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/dist/css/css",
+            "savePath": "/public/css/css",
             "savePathReplacementPairs": null
         }
     ],
-    "liveServer.settings.root": "/dist",
+    "liveServer.settings.root": "/publics",
     "editor.formatOnSave": true
 }
